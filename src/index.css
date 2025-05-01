@@ -1,0 +1,13 @@
+body {
+  font-family: Arial, sans-serif;
+}
+button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}

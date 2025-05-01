@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Roboto+Mono:wght@400;700&display=swap');
+
+/* Reset some basic elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto Mono', monospace;
+  background: #f5e6d3;
+  color: #4a4a4a;
+  overflow: hidden;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* Cyber grid background animation */
+.cyber-grid {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(transparent 0%, rgba(255, 0, 0, 0.1) 2%, transparent 2.5%),
+    linear-gradient(90deg, transparent 0%, rgba(255, 0, 0, 0.1) 2%, transparent 2.5%);
+  background-size: 50px 50px;
+  animation: gridMove 20s linear infinite;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+@keyframes gridMove {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 50px 50px;
+  }
+}
+
+/* Glitch effect */
+@keyframes glitch {
+  0% {
+    text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
+                -0.05em -0.025em 0 rgba(0, 255, 255, 0.75);
+  }
+  14% {
+    text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
+                -0.05em -0.025em 0 rgba(0, 255, 255, 0.75);
+  }
+  15% {
+    text-shadow: -0.05em -0.025em 0 rgba(255, 0, 0, 0.75),
+                0.025em 0.025em 0 rgba(0, 255, 255, 0.75);
+  }
+  49% {
+    text-shadow: -0.05em -0.025em 0 rgba(255, 0, 0, 0.75),
+                0.025em 0.025em 0 rgba(0, 255, 255, 0.75);
+  }
+  50% {
+    text-shadow: 0.025em 0.05em 0 rgba(255, 0, 0, 0.75),
+                0.05em 0 0 rgba(0, 255, 255, 0.75);
+  }
+  100% {
+    text-shadow: -0.025em 0 0 rgba(255, 0, 0, 0.75),
+                -0.025em -0.025em 0 rgba(0, 255, 255, 0.75);
+  }
+}
+
+/* Cyber button style */
+.cyber-button {
+  position: relative;
+  background: transparent;
+  border: 1px solid #ff0000;
+  color: #ff0000;
+  text-transform: uppercase;
+  font-family: 'Press Start 2P', cursive;
+  letter-spacing: 2px;
+  padding: 15px 30px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  text-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+}
+
+.cyber-button:hover {
+  background: rgba(255, 0, 0, 0.1);
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+}
+
+.cyber-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Loading spinner */
+.loading-spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(255, 0, 0, 0.3);
+  border-radius: 50%;
+  border-top-color: #ff0000;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Scan line effect */
+.App::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    transparent 50%,
+    rgba(255, 0, 0, 0.025) 50%
+  );
+  background-size: 100% 4px;
+  pointer-events: none;
+  animation: scanline 4s linear infinite;
+  z-index: 2;
+}
+
+@keyframes scanline {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 100%;
+  }
+}
+
+/* Connect button styling */
+.connect-button {
+  background-color: #8b6b4d !important;
+  color: #ffffff !important;
+  border: none !important;
+  padding: 10px 20px !important;
+  border-radius: 6px !important;
+  font-family: 'Roboto Mono', monospace !important;
+  font-size: 0.9rem !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.1) !important;
+}
+
+.connect-button:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 6px 6px 16px rgba(0, 0, 0, 0.15) !important;
+  background-color: #7a5c40 !important;
+}
+
+/* Generate button animations and styling */
+.generate-button {
+  position: relative;
+  overflow: hidden;
+}
+
+.generate-button:not(:disabled)::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  animation: shine 2s infinite;
+}
+
+.generate-button:not(:disabled):hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(139, 107, 77, 0.3);
+  background-color: #7a5c40;
+}
+
+.generate-button:not(:disabled):active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(139, 107, 77, 0.2);
+}
+
+@keyframes shine {
+  0% {
+    left: -100%;
+  }
+  20% {
+    left: 100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/* Loading animation */
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.generate-button:disabled {
+  animation: pulse 1.5s infinite;
+  cursor: not-allowed;
+}
+
+/* Container hover effects */
+div[style*="background: #f0e6d9"]:hover {
+  box-shadow: 6px 6px 16px rgba(0, 0, 0, 0.08);
+  transform: translateY(-1px);
+  transition: all 0.3s ease;
+}
+
+/* Background texture animation */
+@keyframes backgroundMove {
+  from {
+    background-position: 0 0, 10px 10px;
+  }
+  to {
+    background-position: 20px 20px, 30px 30px;
+  }
+}
+
+.App {
+  animation: backgroundMove 20s linear infinite;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .App {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 1.8rem !important;
+  }
+
+  .connect-button {
+    padding: 10px 20px;
+    font-size: 0.85rem !important;
+  }
+  
+  body {
+    font-size: 0.85rem;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f5e6d3;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #8b6b4d;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #7a5c40;
+}
