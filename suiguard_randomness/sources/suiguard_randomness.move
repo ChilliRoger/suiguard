@@ -7,7 +7,7 @@ module suiguard_randomness::randomness_generator {
     }
 
     public fun generate_random(_ctx: &mut TxContext): vector<u8> {
-        // Hardcoded vector of bytes (simulating random bytes)
+  
         let random_bytes = vector<u8>[42, 56, 78, 90, 12, 34, 56, 78, 90, 12, 34, 56, 78, 90, 12, 34];
 
      
