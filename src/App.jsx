@@ -69,7 +69,7 @@ function App() {
             letterSpacing: "0.5px"
           }}
         >
-          Using protection at night ? ❌ Use protection for Sui ✅
+          Using protection at night?❌ Use protection for Sui ✅
         </div>
         <h1 style={{
           fontSize: "2.2rem",
