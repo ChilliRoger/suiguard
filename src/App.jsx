@@ -58,6 +58,19 @@ function App() {
         zIndex: "1",
         border: "2px solid #d4c4b5"
       }}>
+        <div
+          style={{
+            textAlign: "center",
+            fontFamily: "'Roboto Mono', monospace",
+            fontSize: "1rem",
+            color: "#8b6b4d",
+            marginBottom: "0.7rem",
+            fontWeight: "bold",
+            letterSpacing: "0.5px"
+          }}
+        >
+          Using protection at night ? ❌ Use protection for Sui ✅
+        </div>
         <h1 style={{
           fontSize: "2.2rem",
           marginBottom: "1.5rem",
